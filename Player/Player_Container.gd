@@ -1,6 +1,6 @@
 extends Node2D
 
-func _physics_process(_delta):
+func _physics_process(delta):
 	if get_child_count() <= 1:
 		var Player = load("res://Player/player.tscn")
 		var player = Player.instantiate()

@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://csb1ohlm5wjdh"]
+[gd_scene load_steps=7 format=3 uid="uid://csb1ohlm5wjdh"]
 
 [ext_resource type="PackedScene" uid="uid://bsrggrnt32sfp" path="res://Player/player_container.tscn" id="1_b1oj7"]
+[ext_resource type="Texture2D" uid="uid://boo3550wxyc6e" path="res://Assets/bg_shroom.png" id="1_bxd15"]
 [ext_resource type="PackedScene" uid="uid://wf4gly42rqn4" path="res://Levels/exit.tscn" id="2_pedh3"]
 [ext_resource type="Texture2D" uid="uid://bpmqhl0iqb607" path="res://Assets/spritesheet_ground.png" id="3_d5ee1"]
 
@@ -412,6 +413,11 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_o7obq")
 
 [node name="Game" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2299, 108)
+scale = Vector2(4.8374, 5.02734)
+texture = ExtResource("1_bxd15")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_4fb0d")
