@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://wf4gly42rqn4"]
 
 [ext_resource type="Script" path="res://Levels/Exit.gd" id="1_2com6"]
-[ext_resource type="Texture2D" uid="uid://c2c23fkbdaofm" path="res://Assets/flagGreen2.png" id="2_8p05g"]
+[ext_resource type="Texture2D" uid="uid://covv6tnum446t" path="res://Assets/flagGreen2.png" id="2_8p05g"]
 
 [node name="Exit" type="Area2D"]
 script = ExtResource("1_2com6")

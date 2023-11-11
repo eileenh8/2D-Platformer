@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://covv6tnum446t"
-path="res://.godot/imported/flagGreen2.png-cd230724f9007b2fc7a80221e9167bbb.ctex"
+uid="uid://dbjldt41tpj33"
+path="res://.godot/imported/spritesheet.png-7eb74f42a71eaac58a7cbe0bb302bcda.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/flagGreen2.png"
-dest_files=["res://.godot/imported/flagGreen2.png-cd230724f9007b2fc7a80221e9167bbb.ctex"]
+source_file="res://Assets/spritesheet.png"
+dest_files=["res://.godot/imported/spritesheet.png-7eb74f42a71eaac58a7cbe0bb302bcda.ctex"]
 
 [params]
 

@@ -4,5 +4,5 @@ func _physics_process(delta):
 	if get_child_count() <= 1:
 		var Player = load("res://Player/player.tscn")
 		var player = Player.instantiate()
-		player.position = $Spawn2.position
+		player.position = $Spawn.position
 		add_child(player)

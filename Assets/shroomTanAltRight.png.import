@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://covv6tnum446t"
-path="res://.godot/imported/flagGreen2.png-cd230724f9007b2fc7a80221e9167bbb.ctex"
+uid="uid://bsmfm5pl2e5c7"
+path="res://.godot/imported/shroomTanAltRight.png-72ff7ad87d6f01616b6e6fd5af470383.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/flagGreen2.png"
-dest_files=["res://.godot/imported/flagGreen2.png-cd230724f9007b2fc7a80221e9167bbb.ctex"]
+source_file="res://Assets/shroomTanAltRight.png"
+dest_files=["res://.godot/imported/shroomTanAltRight.png-72ff7ad87d6f01616b6e6fd5af470383.ctex"]
 
 [params]
 
