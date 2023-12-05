@@ -6,3 +6,5 @@ func _physics_process(delta):
 		var player = Player.instantiate()
 		player.position = $Spawn.position
 		add_child(player)
+
+

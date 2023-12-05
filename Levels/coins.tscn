@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://plfpvihehmny"]
+
+[ext_resource type="Texture2D" uid="uid://byja4c17868go" path="res://Assets/spritesheet_hud.png" id="1_6d7y6"]
+[ext_resource type="Script" path="res://Player/Coins.gd" id="2_km5wi"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tff7i"]
+texture = ExtResource("1_6d7y6")
+texture_region_size = Vector2i(128, 128)
+0:4/0 = 0
+0:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:4/0/physics_layer_0/angular_velocity = 0.0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_3rc2n"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 8
+physics_layer_0/collision_mask = 8
+sources/0 = SubResource("TileSetAtlasSource_tff7i")
+
+[node name="Coins" type="TileMap"]
+tile_set = SubResource("TileSet_3rc2n")
+format = 2
+layer_0/tile_data = PackedInt32Array(65556, 0, 4, 65550, 0, 4, 131080, 0, 4, 65540, 0, 4, 196634, 0, 4)
+script = ExtResource("2_km5wi")

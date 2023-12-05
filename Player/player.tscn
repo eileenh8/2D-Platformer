@@ -1,7 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://cq6nrse6eha7k"]
+[gd_scene load_steps=18 format=3 uid="uid://cq6nrse6eha7k"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_l5bbh"]
 [ext_resource type="Texture2D" uid="uid://cf4acegtntcak" path="res://Assets/spritesheet_players.png" id="2_mhv0x"]
+[ext_resource type="Script" path="res://Player/Camera2D.gd" id="3_whq7q"]
+[ext_resource type="AudioStream" uid="uid://cr3l37bid0opg" path="res://Assets/cartoon-jump-6462.mp3" id="4_ifq5o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s6hn2"]
 atlas = ExtResource("2_mhv0x")
@@ -99,6 +101,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0o0im"]
 size = Vector2(115, 159)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_giqvj"]
+radius = 63.0
+height = 208.0
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_l5bbh")
 
@@ -114,3 +120,17 @@ shape = SubResource("RectangleShape2D_0o0im")
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
 limit_top = 0
+script = ExtResource("3_whq7q")
+
+[node name="Coin_Collector" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin_Collector"]
+position = Vector2(1, 50)
+shape = SubResource("CapsuleShape2D_giqvj")
+
+[node name="Jump_Sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ifq5o")
+
+[connection signal="body_entered" from="Coin_Collector" to="." method="_on_coin_collector_body_entered"]

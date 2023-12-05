@@ -1,0 +1,85 @@
+[gd_scene load_steps=13 format=3 uid="uid://bux7brfr8a1cu"]
+
+[ext_resource type="Script" path="res://Enemies/enemy_1.gd" id="1_j40kk"]
+[ext_resource type="Texture2D" uid="uid://dmdd650rfpni3" path="res://Assets/spritesheet_enemies.png" id="1_oa1ic"]
+[ext_resource type="Script" path="res://Enemies/StateMachine.gd" id="3_8dl5n"]
+[ext_resource type="Script" path="res://Enemies/Move.gd" id="4_cbe6v"]
+[ext_resource type="Script" path="res://Enemies/Die.gd" id="5_oe62a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_katyw"]
+atlas = ExtResource("1_oa1ic")
+region = Rect2(0, 1300, 130, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0h2su"]
+atlas = ExtResource("1_oa1ic")
+region = Rect2(0, 1040, 130, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1pdt7"]
+atlas = ExtResource("1_oa1ic")
+region = Rect2(0, 1170, 130, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odn8r"]
+atlas = ExtResource("1_oa1ic")
+region = Rect2(0, 1040, 130, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_035v5"]
+atlas = ExtResource("1_oa1ic")
+region = Rect2(0, 1430, 130, 130)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_giysj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_katyw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0h2su")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1pdt7")
+}],
+"loop": false,
+"name": &"Dying",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odn8r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_035v5")
+}],
+"loop": true,
+"name": &"Moving",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rn0tj"]
+radius = 30.0
+height = 112.0
+
+[node name="Enemy1" type="CharacterBody2D"]
+script = ExtResource("1_j40kk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_giysj")
+animation = &"Moving"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 39)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_rn0tj")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(0, 39)
+rotation = 1.5708
+target_position = Vector2(3.8147e-06, 130)
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("3_8dl5n")
+
+[node name="Move" type="Node" parent="StateMachine"]
+script = ExtResource("4_cbe6v")
+
+[node name="Die" type="Node" parent="StateMachine"]
+script = ExtResource("5_oe62a")

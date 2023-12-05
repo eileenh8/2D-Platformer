@@ -10,3 +10,5 @@ func _on_body_entered(body):
 			get_tree().change_scene_to_file("res://Levels/level2.tscn")
 		elif current_scene == "res://Levels/level2.tscn":
 			get_tree().change_scene_to_file("res://Levels/level3.tscn")
+		elif current_scene == "res://Levels/level3.tscn":
+			get_tree().change_scene_to_file("res://UI/end_game.tscn")

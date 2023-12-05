@@ -1,0 +1,50 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://ck81cpdvwt235"]
+
+[ext_resource type="FontFile" uid="uid://bx04eu1rm5a3g" path="res://Assets/Kenney Mini Square Mono.ttf" id="1_0xtdw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1axxg"]
+border_width_left = 2
+border_width_top = 2
+border_color = Color(0.882353, 0.709804, 0.976471, 1)
+corner_radius_top_left = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t656o"]
+border_width_left = 2
+border_width_top = 2
+border_color = Color(0.882353, 0.709804, 0.976471, 1)
+corner_radius_top_left = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ruyi"]
+bg_color = Color(0.705882, 0.466667, 0.945098, 1)
+border_width_left = 2
+border_width_top = 2
+border_color = Color(0.792157, 0.8, 0.807843, 1)
+corner_radius_top_left = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03ock"]
+border_width_left = 2
+border_width_top = 2
+border_color = Color(0.882353, 0.709804, 0.976471, 1)
+corner_radius_top_left = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kw0rv"]
+border_width_left = 2
+border_width_top = 2
+border_color = Color(0.882353, 0.709804, 0.976471, 1)
+corner_radius_top_left = 20
+corner_radius_bottom_right = 20
+
+[resource]
+default_font = ExtResource("1_0xtdw")
+default_font_size = 22
+Button/fonts/font = ExtResource("1_0xtdw")
+Button/styles/disabled = SubResource("StyleBoxFlat_1axxg")
+Button/styles/focus = SubResource("StyleBoxFlat_t656o")
+Button/styles/hover = SubResource("StyleBoxFlat_3ruyi")
+Button/styles/normal = SubResource("StyleBoxFlat_03ock")
+Button/styles/pressed = SubResource("StyleBoxFlat_kw0rv")
+Label/fonts/font = ExtResource("1_0xtdw")

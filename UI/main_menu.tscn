@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsfbux52uqkqc"]
+
+[ext_resource type="Theme" uid="uid://ck81cpdvwt235" path="res://UI/theme.tres" id="1_ba7df"]
+[ext_resource type="Texture2D" uid="uid://cirhfcc01vtd5" path="res://Assets/Free-Sky-with-Clouds-Background-Pixel-Art2.jpg" id="2_dw20b"]
+[ext_resource type="Script" path="res://UI/main_menu.gd" id="2_ipejd"]
+[ext_resource type="AudioStream" uid="uid://ca0tv8664vmls" path="res://Assets/Sakura-Girl-Daisy-chosic.com_.mp3" id="4_2p5af"]
+
+[node name="Main_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ba7df")
+script = ExtResource("2_ipejd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(514, 349)
+texture = ExtResource("2_dw20b")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = -196.5
+offset_right = 136.0
+offset_bottom = -165.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.862745, 0.662745, 0.862745, 1)
+theme_override_colors/font_shadow_color = Color(0.392157, 0.372549, 0.329412, 1)
+theme_override_font_sizes/font_size = 40
+text = "Alien Adventures"
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -20.0
+offset_right = 100.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = 36.0
+offset_right = 100.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_2p5af")
+autoplay = true
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
