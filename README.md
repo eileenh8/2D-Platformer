@@ -32,6 +32,13 @@ https://craftpix.net/freebies/free-sky-with-clouds-background-pixel-art-set/
 
 https://kenney.nl/assets/kenney-fonts
 
+Music:
+
+Fluffing a Duck Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+Music promoted by https://www.chosic.com/free-music/all/
+
 ## Future Development
 
 None
