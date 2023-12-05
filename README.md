@@ -13,7 +13,7 @@ Features:
 
 Double Jump
 
-Three different levels
+Three levels with different themes
 
 Main, pause, and end menus
 
