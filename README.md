@@ -5,6 +5,8 @@ A basic 2D platformer.
 
 How to play: press A and D to move the character and the Space bar to jump. 
 
+Collect the coins but avoid the spike traps and lava pools!
+
 ## Implementation
 
 Built with Godot 4.1
@@ -12,6 +14,8 @@ Built with Godot 4.1
 Features: 
 
 Double jump
+
+Coin collecting 
 
 Spike traps
 
@@ -23,7 +27,7 @@ Main, pause, and end menus
 
 Different music for each level and main/end screens
 
-Sound effect for jump
+Sound effect for die
 
 
 
@@ -62,9 +66,11 @@ Music promoted by https://www.chosic.com/free-music/all/
 Creative Commons CC BY 3.0
 https://creativecommons.org/licenses/by/3.0/
 
- Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6120">Pixabay</a>
+Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6120">Pixabay</a>
 
 Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6462">Pixabay</a> 
+
+Sound Effect from <a href="https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=66829">Pixabay</a>
 
 ## Future Development
 
