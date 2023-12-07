@@ -23,14 +23,11 @@ Lava death pools
 
 Three levels with different themes
 
-Main, pause, and end menus
+Main and end screen menus
 
 Different music for each level and main/end screens
 
-Sound effect for die
-
-
-
+Sound effects for die and coin
 
 ## What Makes this a Game?
 
@@ -71,6 +68,8 @@ Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-at
 Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6462">Pixabay</a> 
 
 Sound Effect from <a href="https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=66829">Pixabay</a>
+
+Sound Effect from <a href="https://pixabay.com/sound-effects/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=6075">Pixabay</a>
 
 ## Future Development
 
