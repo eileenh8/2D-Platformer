@@ -15,6 +15,8 @@ Double jump
 
 Spike traps
 
+Lava death pools
+
 Three levels with different themes
 
 Main, pause, and end menus
