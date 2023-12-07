@@ -11,7 +11,9 @@ Built with Godot 4.1
 
 Features: 
 
-Double Jump
+Double jump
+
+Spike traps
 
 Three levels with different themes
 
