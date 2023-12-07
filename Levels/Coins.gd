@@ -24,3 +24,4 @@ func get_coin(p):
 		Global.add_coin()
 
 
+

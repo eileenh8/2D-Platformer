@@ -70,6 +70,7 @@ text = "Quit"
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_bimo7")
+volume_db = 6.559
 autoplay = true
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

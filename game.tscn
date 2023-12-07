@@ -1,12 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://d22numpsq8cvu"]
+[gd_scene load_steps=6 format=3 uid="uid://d22numpsq8cvu"]
 
 [ext_resource type="PackedScene" uid="uid://b7cncjmyc75mx" path="res://UI/pausemenu.tscn" id="1_kyeo2"]
 [ext_resource type="AudioStream" uid="uid://d3bcw6oon6chu" path="res://Assets/Fluffing-a-Duck(chosic.com).mp3" id="2_7bg1r"]
 [ext_resource type="AudioStream" uid="uid://cr3l37bid0opg" path="res://Assets/cartoon-jump-6462.mp3" id="3_37row"]
+[ext_resource type="Script" path="res://Traps/Spike.gd" id="4_u1wl4"]
+[ext_resource type="Texture2D" uid="uid://2svvi66dk64u" path="res://Assets/platformPack_tile043.png" id="5_ardk5"]
 
 [node name="Game" type="Node2D"]
 
 [node name="UI" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Menu" parent="UI" instance=ExtResource("1_kyeo2")]
 
@@ -16,3 +19,17 @@ autoplay = true
 
 [node name="Jump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_37row")
+
+[node name="Trap" type="Node2D" parent="."]
+
+[node name="Spike" type="Area2D" parent="Trap"]
+script = ExtResource("4_u1wl4")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Trap/Spike"]
+texture = ExtResource("5_ardk5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Trap/Spike"]
+polygon = PackedVector2Array(-8, -1.2, -8, 2.5, 0.5, 20.2, 10.7, -3, 12.5, -3, 18, -6.3, 20, -5.2, 20, -4, 24, -1, 24, 2.5, 32, 18.5, 32, 32, -32, 32, -32, 25.9, -23.4, 1, -22.1, 1, -19, -3.6, -19, -7.4)
+
+[connection signal="body_entered" from="Trap/Spike" to="Trap/Spike" method="_on_body_entered"]

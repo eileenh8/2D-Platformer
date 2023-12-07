@@ -8,6 +8,10 @@ var can_double_jump = true
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+func die():
+	queue_free()
+	var Die_Sound = get_node("/root/Game/Die_Sound")
+	Die_Sound.play()
 
 func _physics_process(delta):
 	if is_on_floor():
@@ -28,6 +32,7 @@ func _physics_process(delta):
 		$Sprite.play("Jump")
 		velocity.y = JUMP_VELOCITY
 		
+	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("Left", "Right")
@@ -48,3 +53,5 @@ func _physics_process(delta):
 func _on_coin_collector_body_entered(body):
 	if body.name == "Coins":
 		body.get_coin(global_position)
+	var Coin_Sound = get_node("/root/Game/Coin_Sound")
+	Coin_Sound.play()
